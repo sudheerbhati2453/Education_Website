@@ -1,0 +1,51 @@
+/* Add these styles for scroll reveal */
+.about-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.about-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Initially hidden state */
+.hidden-card {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* When revealed */
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.bounce {
+  animation: bounce 2s ease infinite;
+}
+
+.bounce-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease-out;
+}
+
+.bounce-active {
+  opacity: 1;
+  transform: translateY(0);
+  animation: bounce 2s ease-out;
+}
